@@ -9,9 +9,9 @@ public class MazeAutoGenerator : MonoBehaviour
 
     public float cellSize = 1.0f;
 
-    private float mapMinX = -9.0f;
+    private float mapMinX = -9.5f;
     private float mapMaxX = 4.5f;
-    private float mapMinY = -4.5f;
+    private float mapMinY = -5.0f;
     private float mapMaxY = 4.5f;
 
     private int cols;
@@ -78,8 +78,8 @@ public class MazeAutoGenerator : MonoBehaviour
         {
             for (int y = 0; y < rows; y++)
             {
-                float wx = mapMinX + x * cellSize + cellSize * 0.5f;
-                float wy = mapMinY + y * cellSize + cellSize * 0.5f;
+                float wx = mapMinX + x * cellSize + cellSize;
+                float wy = mapMinY + y * cellSize + cellSize;
                 Vector3 pos = new Vector3(wx, wy, 0);
 
                 GameObject prefab;
